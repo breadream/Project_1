@@ -26,10 +26,10 @@ ruby -v
  
 ## Configure Git 
 ```
-git config --global color.ui true <br />
-git config --global user.name "YOUR NAME"<br />
-git config --global user.email "YOUR@EMAIL.com"<br />
-ssh-keygen -t rsa -C "YOUR@EMAIL.com"<br />
+git config --global color.ui true
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR@EMAIL.com"
+ssh-keygen -t rsa -C "YOUR@EMAIL.com"
 ```
 
 # Copy & Paste the output of the following command 
@@ -39,7 +39,9 @@ cat ~/.ssh/id_rsa.pub
 -> 
 https://github.com/settings/keys
 # Check if it works
-ssh -T git@github&#46;com
+```
+ssh -T git@<i></i>github.com
+```
 
 # Install Rails 
 ```
@@ -80,7 +82,7 @@ rails new myapp -d mysql
 cd myapp
 ```
 
-#### If you setup MySQL or Postgres with a username/password, modify the config/database.yml file to contain the username/password that you specified
+- If you setup MySQL or Postgres with a username/password, modify the config/database.yml file to contain the username/password that you specified
 
 ### Create the database
 ```
