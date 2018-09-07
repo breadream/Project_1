@@ -1,11 +1,11 @@
-##Install Homebrew
+# Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-##Install Ruby 
+# Install Ruby 
 brew install rbenv ruby-build
 
-## Add rbenv to bash so that it loads every time you open a terminal
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+### Add rbenv to bash so that it loads every time you open a terminal
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile__
 source ~/.bash_profile
 
 ## Install Ruby
@@ -21,40 +21,39 @@ ssh-keygen -t rsa -C "YOUR@EMAIL.com"
 
 # Copy & Paste the output of the following command 
 cat ~/.ssh/id_rsa.pub 
-# to 
+-> 
 https://github.com/settings/keys
 # Check if it works
 ssh -T git@github.com
 
-## Install Rails 
+# Install Rails 
 gem install rails -v 5.2.0
 rbenv rehash
 rails -v
 
-## Setup Database
+# Setup Database
 brew install sqlite3
-# Install mysql
+## Install mysql
 brew install mysql
-# Run mysql
-# To have launchd start mysql at login:
+## Run mysql
+## To have launchd start mysql at login:
 brew services start mysql
 
 
 ### Create Rails Application
 rails new myapp
-#-> if it shows 'Errno::EACCES: Permission denied @ dir_s_mkdir'
-#-> go into myapp folder and do 'sudo bundle install'
+- if it shows 'Errno::EACCES: Permission denied @ dir_s_mkdir'
+- go into myapp folder and do 'sudo bundle install'
 
-#### If you want to use MySQL
+# If you want to use MySQL
 rails new myapp -d mysql
 
 # Move into the application directory
 cd myapp
 
-# If you setup MySQL or Postgres with a username/password, modify the
-# config/database.yml file to contain the username/password that you specified
+### If you setup MySQL or Postgres with a username/password, modify the config/database.yml file to contain the username/password that you specified
 
-# Create the database
+## Create the database
 rake db:create
 
 rails server
