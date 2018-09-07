@@ -1,9 +1,9 @@
-# Install Homebrew
+## Install Homebrew
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-# Install Ruby 
+## Install Ruby 
 ```
 brew install rbenv ruby-build
 ```
@@ -12,8 +12,6 @@ brew install rbenv ruby-build
 ### Add rbenv to bash so that it loads every time you open a terminal
 ```
 echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile<br />
-```
-```
 source ~/.bash_profile
 ```
 
@@ -32,25 +30,25 @@ git config --global user.email "YOUR@EMAIL.com"
 ssh-keygen -t rsa -C "YOUR@EMAIL.com"
 ```
 
-# Copy & Paste the output of the following command 
+#### Copy & Paste the output of the following command 
 ```
 cat ~/.ssh/id_rsa.pub 
 ```
 -> 
 https://github.com/settings/keys
-# Check if it works
+#### Check if it works
 ```
-ssh -T git@<i></i>github.com
+ssh -T git@github.com
 ```
 
-# Install Rails 
+## Install Rails 
 ```
 gem install rails -v 5.2.0
 rbenv rehash <br />
 rails -v
 ```
 
-# Setup Database
+## Setup Database
 ```
 brew install sqlite3
 ```
@@ -72,12 +70,12 @@ rails new myapp
 ```
 - if it shows 'Errno::EACCES: Permission denied @ dir_s_mkdir', go into myapp folder and do 'sudo bundle install'
 
-# If you want to use MySQL
+### If you want to use MySQL
 ```
 rails new myapp -d mysql
 ```
 
-# Move into the application directory
+### Move into the application directory
 ```
 cd myapp
 ```
@@ -87,9 +85,6 @@ cd myapp
 ### Create the database
 ```
 rake db:create
-```
-
-```
 rails server
 ```
 
