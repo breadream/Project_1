@@ -1,23 +1,25 @@
 # Install Homebrew
+'''
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+'''
 
 # Install Ruby 
 brew install rbenv ruby-build
 
 ### Add rbenv to bash so that it loads every time you open a terminal
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile__
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile<br />
 source ~/.bash_profile
 
-## Install Ruby
+### Install Ruby
 rbenv install 2.5.1
 rbenv global 2.5.1
 ruby -v
  
-# Configure Git 
-git config --global color.ui true
-git config --global user.name "YOUR NAME"
-git config --global user.email "YOUR@EMAIL.com"
-ssh-keygen -t rsa -C "YOUR@EMAIL.com"
+## Configure Git 
+git config --global color.ui true <br />
+git config --global user.name "YOUR NAME"<br />
+git config --global user.email "YOUR@EMAIL.com"<br />
+ssh-keygen -t rsa -C "YOUR@EMAIL.com"<br />
 
 # Copy & Paste the output of the following command 
 cat ~/.ssh/id_rsa.pub 
@@ -51,9 +53,9 @@ rails new myapp -d mysql
 # Move into the application directory
 cd myapp
 
-### If you setup MySQL or Postgres with a username/password, modify the config/database.yml file to contain the username/password that you specified
+#### If you setup MySQL or Postgres with a username/password, modify the config/database.yml file to contain the username/password that you specified
 
-## Create the database
+### Create the database
 rake db:create
 
 rails server
