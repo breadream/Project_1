@@ -44,7 +44,7 @@ ssh -T git@github.com
 ## Install Rails 
 ```
 gem install rails -v 5.2.0
-rbenv rehash <br />
+rbenv rehash
 rails -v
 ```
 
